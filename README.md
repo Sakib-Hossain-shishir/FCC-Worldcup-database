@@ -27,14 +27,3 @@ The focus is on **correct database design**, **clean joins**, and **accurate que
 | opponent_goals | INT | Goals scored by opponent |
 
 ---
-
-## Example Queries
-
-### World Cup Champions by Year
-```sql
-SELECT year, name
-FROM teams
-INNER JOIN games
-  ON teams.team_id = games.winner_id
-WHERE round = 'Final'
-ORDER BY year;
